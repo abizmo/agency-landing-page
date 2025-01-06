@@ -1,5 +1,6 @@
 ---
 import Attribution from "@/components/attribution.astro";
+import "@/styles/global.css";
 ---
 
 <html lang="en">
@@ -11,6 +12,12 @@ import Attribution from "@/components/attribution.astro";
 
     <meta name="generator" content={Astro.generator} />
     <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <slot />

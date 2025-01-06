@@ -1,0 +1,66 @@
+:root {
+  --clr-red: 7 99% 70%;
+  --clr-yellow: 51 100% 49%;
+  --clr-cyan-400: 167 40% 24%;
+  --clr-cyan-300: 168 34% 41%;
+  --clr-blue-800: 212 27% 19%;
+  --clr-blue-400: 198 62% 26%;
+  --clr-blue-300: 213 9% 39%;
+  --clr-blue-200: 232 10% 55%;
+  --clr-blue-100: 210 4% 67%;
+  --clr-white: 0 0% 100%;
+
+  --clr-primary-red: hsl(var(--clr-red));
+  --clr-primary-yellow: hsl(var(--clr-yellow));
+  --clr-graphic-text: hsl(var(--clr-cyan-400));
+  --clr-photography-text: hsl(var(--clr-blue-400));
+  --clr-footer: hsl(var(--clr-cyan-300));
+  --clr-neutral-900: hsl(var(--clr-blue-800));
+  --clr-neutral-500: hsl(var(--clr-blue-300));
+  --clr-neutral-400: hsl(var(--clr-blue-200));
+  --clr-neutral-300: hsl(var(--clr-blue-100));
+  --clr-neutral-100: hsl(var(--clr-white));
+
+  --ff-primary: "Barlow", serif;
+  --ff-secondary: "Fraunces", serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-secondary);
+
+  --fs-base: 1.125rem;
+
+  --fw-bold: 900;
+  --fw-medium: 700;
+  --fw-regular: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+}
