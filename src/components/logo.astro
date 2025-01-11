@@ -1,8 +1,14 @@
 ---
 import Sunnyside from "../assets/logo.svg";
 
-const { width, height } = Astro.props;
+interface Props {
+  size?: "base" | "large";
+}
+
+const { size = "base" } = Astro.props;
+
+const height = size === "base" ? 24 : 32;
+const width = 124 * (height / 24);
 ---
 
-<!-- TODO: handle the fill color -->
-<Sunnyside width={124} height={24} />
+<Sunnyside width={width} height={height} fill="currentColor" />

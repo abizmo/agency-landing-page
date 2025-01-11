@@ -1,6 +1,10 @@
 ---
 import RootLayout from "@/layouts/root.astro";
 import Logo from "@/components/logo.astro";
+import IconFacebook from "@/components/icon-facebook.astro";
+import IconPinterest from "@/components/icon-pinterest.astro";
+import IconTwitter from "@/components/icon-twitter.astro";
+import IconInstagram from "@/components/icon-instagram.astro";
 ---
 
 <RootLayout>
@@ -188,7 +192,7 @@ import Logo from "@/components/logo.astro";
 		</section>
 	</main>
 	<footer>
-		<a><img src="/images/logo.svg" alt="Sunnyside" /></a>
+		<a><Logo size="large" /></a>
 		<nav>
 			<a href="#">About</a>
 			<a href="#">Services</a>
@@ -196,16 +200,16 @@ import Logo from "@/components/logo.astro";
 		</nav>
 		<nav>
 			<a>
-				<img src="/icons/facebook.svg" alt="Facebook" />
+				<IconFacebook />
 			</a>
 			<a>
-				<img src="/icons/instagram.svg" alt="Instagram" />
+				<IconInstagram />
 			</a>
 			<a>
-				<img src="/icons/twitter.svg" alt="Twitter" />
+				<IconTwitter />
 			</a>
 			<a>
-				<img src="/icons/pinterest.svg" alt="Pinterest" />
+				<IconPinterest />
 			</a>
 		</nav>
 	</footer>
