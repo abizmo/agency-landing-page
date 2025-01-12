@@ -1,0 +1,59 @@
+---
+import IconFacebook from "@/components/icon-facebook.astro";
+import IconInstagram from "@/components/icon-instagram.astro";
+import IconPinterest from "@/components/icon-pinterest.astro";
+import IconTwitter from "@/components/icon-twitter.astro";
+import Logo from "@/components/logo.astro";
+---
+
+<footer class="main-footer">
+  <a href="/"><Logo size="large" /></a>
+  <nav class="mapsite-nav">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+  </nav>
+  <nav class="socials-nav">
+    <a href="#">
+      <IconFacebook />
+    </a>
+    <a href="#">
+      <IconInstagram />
+    </a>
+    <a href="#">
+      <IconTwitter />
+    </a>
+    <a href="#">
+      <IconPinterest />
+    </a>
+  </nav>
+</footer>
+
+<style>
+  .main-footer {
+    background-color: var(--clr-footer);
+    color: var(--clr-footer-text);
+
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 2rem;
+    padding: 4rem;
+  }
+
+  a:hover {
+    color: var(--clr-neutral-100);
+  }
+
+  .mapsite-nav {
+    opacity: 0.75;
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  .socials-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+</style>

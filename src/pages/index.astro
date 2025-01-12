@@ -1,12 +1,9 @@
 ---
 import RootLayout from "@/layouts/root.astro";
 import Logo from "@/components/logo.astro";
-import IconFacebook from "@/components/icon-facebook.astro";
-import IconPinterest from "@/components/icon-pinterest.astro";
-import IconTwitter from "@/components/icon-twitter.astro";
-import IconInstagram from "@/components/icon-instagram.astro";
 import IconArrowDown from "@/components/icon-arrow-down.astro";
 import IconHamburger from "@/components/icon-hamburger.astro";
+import Footer from "@/components/footer.astro";
 ---
 
 <RootLayout>
@@ -194,26 +191,5 @@ import IconHamburger from "@/components/icon-hamburger.astro";
 			</picture>
 		</section>
 	</main>
-	<footer>
-		<a><Logo size="large" /></a>
-		<nav>
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Projects</a>
-		</nav>
-		<nav>
-			<a>
-				<IconFacebook />
-			</a>
-			<a>
-				<IconInstagram />
-			</a>
-			<a>
-				<IconTwitter />
-			</a>
-			<a>
-				<IconPinterest />
-			</a>
-		</nav>
-	</footer>
+	<Footer />
 </RootLayout>
