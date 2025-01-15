@@ -28,11 +28,35 @@
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-secondary);
 
-  --fs-base: 1.125rem;
+  --fs-800: 2.5rem;
+  --fs-700: 2rem;
+  --fs-600: 1.75rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+  --fs-100: 0.6875rem;
 
   --fw-bold: 900;
   --fw-medium: 700;
   --fw-regular: 600;
+
+  --lh-body: 1.7;
+  --lh-heading: 1.2;
+
+  --ls-800: 0.3em;
+  --ls-600: 0.15em;
+
+  @media (min-width: 40rem) {
+    --fs-800: 3.375rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.75rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    --fs-100: 0.6875rem;
+  }
 }
 
 *,
@@ -61,12 +85,13 @@ picture {
 
 body {
   font-family: var(--ff-body);
-  font-size: var(--fs-base);
-  line-height: 1.7;
+  font-size: var(--fs-400);
+  line-height: var(--lh-body);
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--ff-heading);
+  line-height: var(--lh-heading);
 }
