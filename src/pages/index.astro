@@ -4,6 +4,7 @@ import Logo from "@/components/logo.astro";
 import IconArrowDown from "@/components/icon-arrow-down.astro";
 import IconHamburger from "@/components/icon-hamburger.astro";
 import Footer from "@/components/footer.astro";
+import Gallery from "@/components/gallery.astro";
 ---
 
 <RootLayout>
@@ -27,7 +28,7 @@ import Footer from "@/components/footer.astro";
 				<picture>
 					<source
 						srcset="/images/desktop/transform.jpg"
-						media="(min-width: 1024px)"
+						media="(min-width: 48rem)"
 					/>
 					<source srcset="/images/mobile/transform.jpg" />
 					<img
@@ -51,7 +52,7 @@ import Footer from "@/components/footer.astro";
 				<picture>
 					<source
 						srcset="/images/desktop/stand-out.jpg"
-						media="(min-width: 1024px)"
+						media="(min-width: 48rem)"
 					/>
 					<source srcset="/images/mobile/stand-out.jpg" />
 					<img
@@ -75,7 +76,7 @@ import Footer from "@/components/footer.astro";
 				<picture>
 					<source
 						srcset="/images/desktop/graphic-design.jpg"
-						media="(min-width: 1024px)"
+						media="(min-width: 48rem)"
 					/>
 					<source srcset="/images/mobile/graphic-design.jpg" />
 					<img
@@ -96,7 +97,7 @@ import Footer from "@/components/footer.astro";
 				<picture>
 					<source
 						srcset="/images/desktop/photography.jpg"
-						media="(min-width: 1024px)"
+						media="(min-width: 48rem)"
 					/>
 					<source srcset="/images/mobile/photography.jpg" />
 					<img
@@ -153,43 +154,7 @@ import Footer from "@/components/footer.astro";
 				</article>
 			</div>
 		</section>
-		<section>
-			<picture>
-				<source
-					srcset="/images/desktop/gallery-milkbottles.jpg"
-					media="(min-width: 1024px)"
-				/>
-				<source srcset="/images/mobile/gallery-milkbottles.jpg" />
-				<img
-					src="/images/mobile/gallery-milkbottles.jpg"
-					alt="Three milk bottles"
-				/>
-			</picture>
-			<picture>
-				<source
-					srcset="/images/desktop/gallery-orange.jpg"
-					media="(min-width: 1024px)"
-				/>
-				<source srcset="/images/mobile/gallery-orange.jpg" />
-				<img src="/images/mobile/gallery-orange.jpg" alt="Orange slices" />
-			</picture>
-			<picture>
-				<source
-					srcset="/images/desktop/gallery-cone.jpg"
-					media="(min-width: 1024px)"
-				/>
-				<source srcset="/images/mobile/gallery-cone.jpg" />
-				<img src="/images/mobile/gallery-cone.jpg" alt="Ice cream cone" />
-			</picture>
-			<picture>
-				<source
-					srcset="/images/desktop/gallery-sugar-cubes.jpg"
-					media="(min-width: 1024px)"
-				/>
-				<source srcset="/images/mobile/gallery-sugar-cubes.jpg" />
-				<img src="/images/mobile/gallery-sugar-cubes.jpg" alt="Sugar cubes" />
-			</picture>
-		</section>
+		<Gallery />
 	</main>
 	<Footer />
 </RootLayout>

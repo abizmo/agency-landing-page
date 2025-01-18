@@ -47,7 +47,7 @@
   --ls-800: 0.3em;
   --ls-600: 0.15em;
 
-  @media (min-width: 40rem) {
+  @media (min-width: 48rem) {
     --fs-800: 3.375rem;
     --fs-700: 2.5rem;
     --fs-600: 1.75rem;

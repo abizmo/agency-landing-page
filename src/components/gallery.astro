@@ -1,0 +1,50 @@
+---
+import OptimizedImage from "@/components/optimized-image.astro";
+import milkBottlesMobile from "@/assets/images/mobile/gallery-milkbottles.jpg";
+import milkBottlesDesktop from "@/assets/images/desktop/gallery-milkbottles.jpg";
+import orangeMobile from "@/assets/images/mobile/gallery-orange.jpg";
+import orangeDesktop from "@/assets/images/desktop/gallery-orange.jpg";
+import coneMobile from "@/assets/images/mobile/gallery-cone.jpg";
+import coneDesktop from "@/assets/images/desktop/gallery-cone.jpg";
+import sugarCubesMobile from "@/assets/images/mobile/gallery-sugar-cubes.jpg";
+import sugarCubesDesktop from "@/assets/images/desktop/gallery-sugar-cubes.jpg";
+---
+
+<section>
+  <OptimizedImage
+    mobileImgUrl={milkBottlesMobile}
+    desktopImgUrl={milkBottlesDesktop}
+    alt="Three milk bottles"
+  />
+  <OptimizedImage
+    mobileImgUrl={orangeMobile}
+    desktopImgUrl={orangeDesktop}
+    }
+    alt="Orange slices"
+  />
+  <OptimizedImage
+    mobileImgUrl={coneMobile}
+    desktopImgUrl={coneDesktop}
+    alt="Ice cream cone"
+  />
+  <OptimizedImage
+    mobileImgUrl={sugarCubesMobile}
+    desktopImgUrl={sugarCubesDesktop}
+    alt="Sugar cubes"
+  />
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+
+    @media (min-width: 30rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 48rem) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
