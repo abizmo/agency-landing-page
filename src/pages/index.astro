@@ -5,156 +5,118 @@ import IconArrowDown from "@/components/icon-arrow-down.astro";
 import IconHamburger from "@/components/icon-hamburger.astro";
 import Footer from "@/components/footer.astro";
 import Gallery from "@/components/gallery.astro";
+import ClientTestimonials from "@/components/client-testimonials.astro";
 ---
 
 <RootLayout>
-	<header>
-		<a><Logo /></a>
-		<nav>
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Projects</a>
-			<a href="#">Contact</a>
-		</nav>
-		<button><IconHamburger /><span>Menu</span></button>
-	</header>
-	<main>
-		<section>
-			<h1>We are creatives</h1>
-			<IconArrowDown />
-		</section>
-		<section>
-			<div>
-				<picture>
-					<source
-						srcset="/images/desktop/transform.jpg"
-						media="(min-width: 48rem)"
-					/>
-					<source srcset="/images/mobile/transform.jpg" />
-					<img
-						src="/images/mobile/transform.jpg"
-						alt="Egg on a yellow surface"
-					/>
-				</picture>
-			</div>
-			<div>
-				<h2>Transform your brand</h2>
-				<p>
-					We are a full-service creative agency specializing in helping brands
-					grow fast. Engage your clients through compelling visuals that do most
-					of the marketing for you.
-				</p>
-				<a href="#">Learn more</a>
-			</div>
-		</section>
-		<section>
-			<div>
-				<picture>
-					<source
-						srcset="/images/desktop/stand-out.jpg"
-						media="(min-width: 48rem)"
-					/>
-					<source srcset="/images/mobile/stand-out.jpg" />
-					<img
-						src="/images/mobile/stand-out.jpg"
-						alt="Pink glass over darker pink backgrond"
-					/>
-				</picture>
-			</div>
-			<div>
-				<h2>Stand out to the right audience</h2>
-				<p>
-					Using a collaborative formula of designers, researchers,
-					photographers, videographers, and copywriters, we'll build and extend
-					your brand in digital places.
-				</p>
-				<a href="#">Learn more</a>
-			</div>
-		</section>
-		<section>
-			<div>
-				<picture>
-					<source
-						srcset="/images/desktop/graphic-design.jpg"
-						media="(min-width: 48rem)"
-					/>
-					<source srcset="/images/mobile/graphic-design.jpg" />
-					<img
-						src="/images/mobile/graphic-design.jpg"
-						alt="Yellow and white paint strokes"
-					/>
-				</picture>
-				<div>
-					<h3>Graphic design</h3>
-					<p>
-						Great design makes you memorable. We deliver artwork that
-						underscores your brand message and captures potential clients’
-						attention.
-					</p>
-				</div>
-			</div>
-			<div>
-				<picture>
-					<source
-						srcset="/images/desktop/photography.jpg"
-						media="(min-width: 48rem)"
-					/>
-					<source srcset="/images/mobile/photography.jpg" />
-					<img
-						src="/images/mobile/photography.jpg"
-						alt="Yellow and white paint strokes"
-					/>
-				</picture>
-				<div>
-					<h3>Photography</h3>
-					<p>
-						Increase your credibility by getting the most stunning, high-quality
-						photos that improve your business image.
-					</p>
-				</div>
-			</div>
-		</section>
-		<section>
-			<h3>Client testimonials</h3>
-			<div>
-				<article>
-					<img src="/images/emily.jpg" alt="Emily R." />
-					<blockquote>
-						We put our trust in Sunnyside and they delivered, making sure our
-						needs were met and deadlines were always hit.
-					</blockquote>
-					<div>
-						<h4>Emily R.</h4>
-						<p>Marketing Director</p>
-					</div>
-				</article>
-				<article>
-					<img src="/images/thomas.jpg" alt="Thomas S." />
-					<blockquote>
-						Sunnyside’s enthusiasm coupled with their keen interest in our
-						brand’s success made it a satisfying and enjoyable experience.
-					</blockquote>
-					<div>
-						<h4>Thomas S.</h4>
-						<p>Chief Operating Officer</p>
-					</div>
-				</article>
-				<article>
-					<img src="/images/jennie.jpg" alt="
-  Jennie F.
-" />
-					<blockquote>
-						Incredible end result! Our sales increased over 400% when we worked
-						with Sunnyside. Highly recommended!
-					</blockquote>
-					<div>
-						<h4>Jennie F.</h4>
-						<p>Business Owner</p>
-					</div>
-				</article>
-			</div>
-		</section>
-		<Gallery />
-	</main>
-	<Footer />
+  <header>
+    <a><Logo /></a>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button><IconHamburger /><span>Menu</span></button>
+  </header>
+  <main>
+    <section>
+      <h1>We are creatives</h1>
+      <IconArrowDown />
+    </section>
+    <section>
+      <div>
+        <picture>
+          <source
+            srcset="/images/desktop/transform.jpg"
+            media="(min-width: 48rem)"
+          />
+          <source srcset="/images/mobile/transform.jpg" />
+          <img
+            src="/images/mobile/transform.jpg"
+            alt="Egg on a yellow surface"
+          />
+        </picture>
+      </div>
+      <div>
+        <h2>Transform your brand</h2>
+        <p>
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <a href="#">Learn more</a>
+      </div>
+    </section>
+    <section>
+      <div>
+        <picture>
+          <source
+            srcset="/images/desktop/stand-out.jpg"
+            media="(min-width: 48rem)"
+          />
+          <source srcset="/images/mobile/stand-out.jpg" />
+          <img
+            src="/images/mobile/stand-out.jpg"
+            alt="Pink glass over darker pink backgrond"
+          />
+        </picture>
+      </div>
+      <div>
+        <h2>Stand out to the right audience</h2>
+        <p>
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we'll build and extend
+          your brand in digital places.
+        </p>
+        <a href="#">Learn more</a>
+      </div>
+    </section>
+    <section>
+      <div>
+        <picture>
+          <source
+            srcset="/images/desktop/graphic-design.jpg"
+            media="(min-width: 48rem)"
+          />
+          <source srcset="/images/mobile/graphic-design.jpg" />
+          <img
+            src="/images/mobile/graphic-design.jpg"
+            alt="Yellow and white paint strokes"
+          />
+        </picture>
+        <div>
+          <h3>Graphic design</h3>
+          <p>
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
+      </div>
+      <div>
+        <picture>
+          <source
+            srcset="/images/desktop/photography.jpg"
+            media="(min-width: 48rem)"
+          />
+          <source srcset="/images/mobile/photography.jpg" />
+          <img
+            src="/images/mobile/photography.jpg"
+            alt="Yellow and white paint strokes"
+          />
+        </picture>
+        <div>
+          <h3>Photography</h3>
+          <p>
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </div>
+    </section>
+    <ClientTestimonials />
+    <Gallery />
+  </main>
+  <Footer />
 </RootLayout>
