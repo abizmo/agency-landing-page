@@ -16,7 +16,7 @@
   --clr-photography-text: hsl(var(--clr-blue-400));
   --clr-footer-text: hsl(var(--clr-cyan-400));
   --clr-footer: hsl(var(--clr-cyan-300) / 0.8);
-  --clr-neutral-900: hsl(var(--clr-blue-800));
+  --clr-neutral-800: hsl(var(--clr-blue-800));
   --clr-neutral-500: hsl(var(--clr-blue-300));
   --clr-neutral-400: hsl(var(--clr-blue-200));
   --clr-neutral-300: hsl(var(--clr-blue-100));

@@ -1,38 +1,75 @@
-<section>
-  <h3>Client testimonials</h3>
-  <div>
-    <article>
-      <img src="/images/emily.jpg" alt="Emily R." />
-      <blockquote>
-        We put our trust in Sunnyside and they delivered, making sure our needs
-        were met and deadlines were always hit.
-      </blockquote>
-      <div>
-        <h4>Emily R.</h4>
-        <p>Marketing Director</p>
-      </div>
-    </article>
-    <article>
-      <img src="/images/thomas.jpg" alt="Thomas S." />
-      <blockquote>
-        Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
-        success made it a satisfying and enjoyable experience.
-      </blockquote>
-      <div>
-        <h4>Thomas S.</h4>
-        <p>Chief Operating Officer</p>
-      </div>
-    </article>
-    <article>
-      <img src="/images/jennie.jpg" alt="Jennie F." />
-      <blockquote>
-        Incredible end result! Our sales increased over 400% when we worked with
-        Sunnyside. Highly recommended!
-      </blockquote>
-      <div>
-        <h4>Jennie F.</h4>
-        <p>Business Owner</p>
-      </div>
-    </article>
+---
+import Testimonial from "@/components/testimonial.astro";
+const testimonials = [
+  {
+    imageSrc: "/images/emily.jpg",
+    imageAlt: "Emily R.",
+    quote:
+      "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+    name: "Emily R.",
+    position: "Marketing Director",
+  },
+  {
+    imageSrc: "/images/thomas.jpg",
+    imageAlt: "Thomas S.",
+    quote:
+      "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
+    name: "Thomas S.",
+    position: "Chief Operating Officer",
+  },
+  {
+    imageSrc: "/images/jennie.jpg",
+    imageAlt: "Jennie F.",
+    quote:
+      "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+    name: "Jennie F.",
+    position: "Business Owner",
+  },
+];
+---
+
+<section class="testimonials">
+  <h3 class="testimonials__title">Client testimonials</h3>
+  <div class="testimonials__list">
+    {
+      testimonials.map((testimonial) => (
+        <Testimonial class="testimonials__list-item" {...testimonial} />
+      ))
+    }
   </div>
 </section>
+
+<style>
+  .testimonials {
+    padding: 4rem 1.5rem;
+  }
+
+  .testimonials__title {
+    color: var(--clr-neutral-300);
+    font-size: var(--fs-300);
+    letter-spacing: var(--ls-800);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    @media (min-width: 48rem) {
+      font-size: var(--fs-400);
+    }
+  }
+
+  .testimonials__list {
+    display: grid;
+    gap: 4rem;
+
+    @media (min-width: 48rem) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 1fr auto;
+      gap: 4rem 2.5rem;
+
+      & .testimonials__list-item {
+        grid-row: span 3;
+        grid-template-rows: subgrid;
+      }
+    }
+  }
+</style>
