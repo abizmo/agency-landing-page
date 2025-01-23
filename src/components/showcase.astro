@@ -1,0 +1,46 @@
+---
+import ShowcaseItem from "./showcase-item.astro";
+
+const showcaseItems = [
+  {
+    srcsetDesktop: "/images/desktop/graphic-design.jpg",
+    srcsetMobile: "/images/mobile/graphic-design.jpg",
+    alt: "Yellow and white paint strokes",
+    class: "graphic",
+    title: "Graphic design",
+    description:
+      "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.",
+  },
+  {
+    srcsetDesktop: "/images/desktop/photography.jpg",
+    srcsetMobile: "/images/mobile/photography.jpg",
+    alt: "Yellow and white paint strokes",
+    class: "photography",
+    title: "Photography",
+    description:
+      "Increase your credibility by getting the most stunning, high-quality photos that improve your business image.",
+  },
+];
+---
+
+<section class="showcase">
+  {showcaseItems.map((item) => <ShowcaseItem {...item} />)}
+</section>
+
+<style>
+  .showcase {
+    display: grid;
+
+    @media (min-width: 48rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .graphic {
+    color: var(--clr-graphic-text);
+  }
+
+  .photography {
+    color: var(--clr-photography-text);
+  }
+</style>

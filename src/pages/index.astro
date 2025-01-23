@@ -6,6 +6,7 @@ import IconHamburger from "@/components/icon-hamburger.astro";
 import Footer from "@/components/footer.astro";
 import Gallery from "@/components/gallery.astro";
 import ClientTestimonials from "@/components/client-testimonials.astro";
+import Showcase from "@/components/showcase.astro";
 ---
 
 <RootLayout>
@@ -72,49 +73,7 @@ import ClientTestimonials from "@/components/client-testimonials.astro";
         <a href="#">Learn more</a>
       </div>
     </section>
-    <section>
-      <div>
-        <picture>
-          <source
-            srcset="/images/desktop/graphic-design.jpg"
-            media="(min-width: 48rem)"
-          />
-          <source srcset="/images/mobile/graphic-design.jpg" />
-          <img
-            src="/images/mobile/graphic-design.jpg"
-            alt="Yellow and white paint strokes"
-          />
-        </picture>
-        <div>
-          <h3>Graphic design</h3>
-          <p>
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients’
-            attention.
-          </p>
-        </div>
-      </div>
-      <div>
-        <picture>
-          <source
-            srcset="/images/desktop/photography.jpg"
-            media="(min-width: 48rem)"
-          />
-          <source srcset="/images/mobile/photography.jpg" />
-          <img
-            src="/images/mobile/photography.jpg"
-            alt="Yellow and white paint strokes"
-          />
-        </picture>
-        <div>
-          <h3>Photography</h3>
-          <p>
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Showcase />
     <ClientTestimonials />
     <Gallery />
   </main>

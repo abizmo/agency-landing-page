@@ -1,0 +1,52 @@
+---
+const {
+  srcsetDesktop,
+  srcsetMobile,
+  alt,
+  title,
+  description,
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<div class:list={[className, "showcase-item"]} {...rest}>
+  <picture>
+    <source srcset={srcsetDesktop} media="(min-width: 60rem)" />
+    <source srcset={srcsetMobile} />
+    <img src={srcsetMobile} alt={alt} />
+  </picture>
+  <div class="showcase-item__content">
+    <h3 class="showcase-item__title">{title}</h3>
+    <p class="showcase-item__description">{description}</p>
+  </div>
+</div>
+
+<style>
+  .showcase-item {
+    display: grid;
+    grid-template-areas: "stack";
+    align-items: end;
+    text-align: center;
+
+    & > * {
+      grid-area: stack;
+    }
+  }
+
+  .showcase-item__content {
+    margin-bottom: 4rem;
+  }
+
+  .showcase-item__title {
+    font-size: var(--fs-600);
+    margin-bottom: 2rem;
+  }
+
+  .showcase-item__description {
+    opacity: 0.8;
+    font-size: var(--fs-300);
+    max-width: 38ch;
+    margin-inline: auto;
+  }
+</style>
