@@ -30,6 +30,7 @@ const showcaseItems = [
 <style>
   .showcase {
     display: grid;
+    justify-items: start;
 
     @media (min-width: 48rem) {
       grid-template-columns: repeat(2, 1fr);
@@ -38,6 +39,10 @@ const showcaseItems = [
 
   .graphic {
     color: var(--clr-graphic-text);
+
+    @media (min-width: 48rem) {
+      justify-self: end;
+    }
   }
 
   .photography {
