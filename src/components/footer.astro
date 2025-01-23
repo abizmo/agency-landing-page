@@ -6,7 +6,7 @@ import IconTwitter from "@/components/icon-twitter.astro";
 import Logo from "@/components/logo.astro";
 ---
 
-<footer class="main-footer">
+<footer class="main-footer | container">
   <a href="/"><Logo size="large" /></a>
   <nav class="mapsite-nav">
     <a href="#">About</a>
@@ -31,6 +31,7 @@ import Logo from "@/components/logo.astro";
 
 <style>
   .main-footer {
+    --max-width: var(--mx-wide);
     background-color: var(--clr-footer);
     color: var(--clr-footer-text);
 

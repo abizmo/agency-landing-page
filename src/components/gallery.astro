@@ -10,7 +10,7 @@ import sugarCubesMobile from "@/assets/images/mobile/gallery-sugar-cubes.jpg";
 import sugarCubesDesktop from "@/assets/images/desktop/gallery-sugar-cubes.jpg";
 ---
 
-<section>
+<section class="gallery | container">
   <OptimizedImage
     mobileImgUrl={milkBottlesMobile}
     desktopImgUrl={milkBottlesDesktop}
@@ -35,7 +35,8 @@ import sugarCubesDesktop from "@/assets/images/desktop/gallery-sugar-cubes.jpg";
 </section>
 
 <style>
-  section {
+  .gallery {
+    --max-width: var(--mx-wide);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
 

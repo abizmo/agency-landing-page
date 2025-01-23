@@ -47,6 +47,8 @@
   --ls-800: 0.3em;
   --ls-600: 0.15em;
 
+  --mx-narrow: 67rem;
+  --mx-wide: 90rem;
   @media (min-width: 48rem) {
     --fs-800: 3.375rem;
     --fs-700: 2.5rem;
@@ -97,7 +99,7 @@ h3 {
 }
 
 .container {
-  --max-width: 67rem;
+  --max-width: var(--mx-narrow);
   --padding-inline: 1.5rem;
 
   width: min(var(--max-width), 100% - (var(--padding-inline) * 2));
