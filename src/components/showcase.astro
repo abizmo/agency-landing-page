@@ -23,14 +23,14 @@ const showcaseItems = [
 ];
 ---
 
-<section class="showcase">
+<section class="showcase | container">
   {showcaseItems.map((item) => <ShowcaseItem {...item} />)}
 </section>
 
 <style>
   .showcase {
     display: grid;
-    justify-items: start;
+    --max-width: 90rem;
 
     @media (min-width: 48rem) {
       grid-template-columns: repeat(2, 1fr);
@@ -39,10 +39,6 @@ const showcaseItems = [
 
   .graphic {
     color: var(--clr-graphic-text);
-
-    @media (min-width: 48rem) {
-      justify-self: end;
-    }
   }
 
   .photography {
