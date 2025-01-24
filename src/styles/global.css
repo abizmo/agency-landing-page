@@ -108,4 +108,8 @@ h3 {
 
 .container-wide {
   --max-width: var(--mx-wide);
+
+  @media (width <= 90rem) {
+    width: auto;
+  }
 }
