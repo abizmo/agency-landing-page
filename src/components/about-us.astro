@@ -1,0 +1,36 @@
+---
+import Card from "./card.astro";
+
+const features = [
+  {
+    title: "Transform your brand",
+    description:
+      "We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
+    image: {
+      mobile: "/images/mobile/transform.jpg",
+      desktop: "/images/desktop/transform.jpg",
+      alt: "Egg on a yellow surface",
+    },
+    learnMoreLink: "#",
+  },
+  {
+    title: "Stand out to the right audience",
+    description:
+      "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.",
+    image: {
+      mobile: "/images/mobile/stand-out.jpg",
+      desktop: "/images/desktop/stand-out.jpg",
+      alt: "Pink glass over darker pink backgrond",
+    },
+    learnMoreLink: "#",
+  },
+];
+---
+
+<section class="container container-wide">
+  {
+    features.map((feature, index) => (
+      <Card feature={feature} reverse={index % 2 === 0} />
+    ))
+  }
+</section>
