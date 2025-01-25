@@ -2,13 +2,27 @@
 import Sunnyside from "../assets/logo.svg";
 
 interface Props {
-  size?: "base" | "large";
+  large?: boolean;
 }
 
-const { size = "base" } = Astro.props;
-
-const height = size === "base" ? 24 : 32;
-const width = 124 * (height / 24);
+const { large } = Astro.props;
 ---
 
-<Sunnyside width={width} height={height} fill="currentColor" />
+<Sunnyside class:list={[{ large }]} fill="currentColor" />
+
+<style>
+  svg {
+    height: 1.5rem;
+    width: 7.75rem;
+
+    @media (min-width: 47rem) {
+      height: 2rem;
+      width: 10.25rem;
+    }
+  }
+
+  .large {
+    height: 2rem;
+    width: 10.25rem;
+  }
+</style>
