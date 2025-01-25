@@ -1,26 +1,16 @@
 ---
 import RootLayout from "@/layouts/root.astro";
-import Logo from "@/components/logo.astro";
-import IconHamburger from "@/components/icon-hamburger.astro";
 import Footer from "@/components/footer.astro";
 import Gallery from "@/components/gallery.astro";
 import ClientTestimonials from "@/components/client-testimonials.astro";
 import Showcase from "@/components/showcase.astro";
 import AboutUs from "@/components/about-us.astro";
 import Hero from "@/components/hero.astro";
+import Header from "@/components/header.astro";
 ---
 
 <RootLayout>
-  <header style="position:absolute;">
-    <a><Logo /></a>
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
-    <button><IconHamburger /><span>Menu</span></button>
-  </header>
+  <Header />
   <main>
     <Hero />
     <AboutUs />

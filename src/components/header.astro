@@ -1,0 +1,93 @@
+---
+import Logo from "@/components/logo.astro";
+import IconHamburger from "@/components/icon-hamburger.astro";
+---
+
+<header class="primary-header">
+  <a><Logo /></a>
+  <nav class="navigation">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+  <button class="toggle-menu" aria-expanded="false">
+    <IconHamburger />
+    <span class="visually-hidden">Menu</span>
+  </button>
+</header>
+
+<script>
+  const toggleMenu = document.querySelector(".toggle-menu");
+  const navigation = document.querySelector(".navigation");
+
+  toggleMenu.addEventListener("click", () => {
+    navigation?.hasAttribute("data-visible")
+      ? toggleMenu?.setAttribute("aria-expanded", "false")
+      : toggleMenu?.setAttribute("aria-expanded", "true");
+    navigation?.toggleAttribute("data-visible");
+  });
+</script>
+
+<style>
+  .primary-header {
+    position: absolute;
+    inset: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--clr-neutral-100);
+    padding: 2.5rem 1.5rem;
+
+    @media (min-width: 47rem) {
+      padding: 2rem 2.5rem;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    gap: 3rem;
+
+    @media (max-width: 46.9375rem) {
+      display: none;
+
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      position: absolute;
+      inset: 5rem 1.5rem auto;
+      color: var(--clr-neutral-400);
+      background-color: var(--clr-neutral-100);
+      padding: 2rem 1.5rem;
+      font-size: var(--fs-500);
+    }
+  }
+
+  .navigation[data-visible] {
+    display: flex;
+  }
+
+  .toggle-menu {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0.25rem;
+
+    @media (min-width: 47rem) {
+      display: none;
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
