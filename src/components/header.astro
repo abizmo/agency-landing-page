@@ -21,7 +21,7 @@ import IconHamburger from "@/components/icon-hamburger.astro";
   const toggleMenu = document.querySelector(".toggle-menu");
   const navigation = document.querySelector(".navigation");
 
-  toggleMenu.addEventListener("click", () => {
+  toggleMenu?.addEventListener("click", () => {
     navigation?.hasAttribute("data-visible")
       ? toggleMenu?.setAttribute("aria-expanded", "false")
       : toggleMenu?.setAttribute("aria-expanded", "true");
