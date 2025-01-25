@@ -1,17 +1,17 @@
 ---
 import RootLayout from "@/layouts/root.astro";
 import Logo from "@/components/logo.astro";
-import IconArrowDown from "@/components/icon-arrow-down.astro";
 import IconHamburger from "@/components/icon-hamburger.astro";
 import Footer from "@/components/footer.astro";
 import Gallery from "@/components/gallery.astro";
 import ClientTestimonials from "@/components/client-testimonials.astro";
 import Showcase from "@/components/showcase.astro";
 import AboutUs from "@/components/about-us.astro";
+import Hero from "@/components/hero.astro";
 ---
 
 <RootLayout>
-  <header>
+  <header style="position:absolute;">
     <a><Logo /></a>
     <nav>
       <a href="#">About</a>
@@ -22,10 +22,7 @@ import AboutUs from "@/components/about-us.astro";
     <button><IconHamburger /><span>Menu</span></button>
   </header>
   <main>
-    <section>
-      <h1>We are creatives</h1>
-      <IconArrowDown />
-    </section>
+    <Hero />
     <AboutUs />
     <Showcase />
     <ClientTestimonials />

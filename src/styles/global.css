@@ -28,7 +28,7 @@
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-secondary);
 
-  --fs-800: 2.5rem;
+  --fs-800: clamp(2.5rem, 2.1919rem + 1.3146vw, 3.375rem);
   --fs-700: clamp(2rem, 1.6452rem + 1.3356vw, 2.5rem);
   --fs-600: 1.75rem;
   --fs-500: 1.25rem;
@@ -50,13 +50,7 @@
   --mx-narrow: 67rem;
   --mx-wide: 90rem;
   @media (min-width: 48rem) {
-    --fs-800: 3.375rem;
-    --fs-600: 1.75rem;
     --fs-500: 1.125rem;
-    --fs-400: 1.125rem;
-    --fs-300: 1rem;
-    --fs-200: 0.875rem;
-    --fs-100: 0.6875rem;
   }
 }
 
@@ -94,6 +88,7 @@ h1,
 h2,
 h3 {
   font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-heading);
 }
 

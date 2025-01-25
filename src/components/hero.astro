@@ -1,0 +1,44 @@
+---
+import IconArrowDown from "@/components/icon-arrow-down.astro";
+---
+
+<section class="hero | container container-wide">
+  <picture>
+    <source
+      srcset="/images/desktop/header.jpg"
+      media="(min-width: 46.876rem)"
+    />
+    <source srcset="/images/mobile/header.jpg" />
+    <img src="/images/mobile/header.jpg" alt="" />
+  </picture>
+  <div class="hero__content">
+    <h1 class="hero__title">We are creatives</h1>
+    <IconArrowDown />
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-areas: "stack";
+    align-items: center;
+
+    & > * {
+      grid-area: stack;
+    }
+  }
+
+  .hero__content {
+    color: var(--clr-neutral-100);
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: clamp(3rem, 1.9437rem + 4.507vw, 6rem);
+  }
+
+  .hero__title {
+    font-size: var(--fs-800);
+    letter-spacing: var(--ls-600);
+    text-transform: uppercase;
+  }
+</style>
