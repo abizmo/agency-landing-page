@@ -1,0 +1,47 @@
+---
+interface Props {
+  href: string;
+  secondary?: boolean;
+}
+
+const { href, secondary } = Astro.props;
+---
+
+<a href={href} class:list={[{ secondary }]}><slot /></a>
+
+<style>
+  a {
+    font-size: var(--fs-300);
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    position: relative;
+
+    @media (min-width: 48rem) {
+      font-size: var(--fs-200);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 110%;
+      height: 0.5rem;
+      position: absolute;
+      bottom: -0.125rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--clr-primary-red);
+      z-index: -1;
+      opacity: 0.3;
+      border-radius: 999rem;
+    }
+
+    &:hover::before {
+      opacity: 0.9;
+    }
+
+    &.secondary::before {
+      background-color: var(--clr-primary-yellow);
+    }
+  }
+</style>

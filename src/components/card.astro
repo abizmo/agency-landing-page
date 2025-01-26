@@ -1,4 +1,6 @@
 ---
+import Link from "./link.astro";
+
 interface CardProps {
   feature: {
     title: string;
@@ -27,7 +29,7 @@ const { feature, reverse } = Astro.props;
   <div class="card__content">
     <h2 class="card__title">{feature.title}</h2>
     <p class="card__description">{feature.description}</p>
-    <a href={feature.learnMoreLink}>Learn more</a>
+    <Link href={feature.learnMoreLink} secondary={reverse}>Learn more</Link>
   </div>
 </article>
 
